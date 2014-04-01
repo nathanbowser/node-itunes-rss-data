@@ -1,0 +1,26 @@
+{
+  "name": "node-itunes-rss-data",
+  "version": "1.0.0",
+  "description": "Tracks itunes rss feed data. — Edit",
+  "main": "lib/index.js",
+  "scripts": {
+    "populate-countries": "curl https://rss.itunes.apple.com/data/lang/en-US/common.json | json feed_country > data/countries.json",
+    "populate-media": "node lib/populate-media.js > data/media.json",
+    "populate": "npm run populate-media && npm run populate-countries"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/nathanbowser/node-itunes-rss-data.git"
+  },
+  "author": "Nathan Bowser <nathan.bowser@spiderstrategies.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nathanbowser/node-itunes-rss-data/issues"
+  },
+  "homepage": "https://github.com/nathanbowser/node-itunes-rss-data",
+  "dependencies": {
+    "request": "^2.34.0",
+    "JSONStream": "^0.8.0",
+    "event-stream": "^3.1.1"
+  }
+}
