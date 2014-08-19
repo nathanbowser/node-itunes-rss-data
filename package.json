@@ -1,6 +1,6 @@
 {
   "name": "node-itunes-rss-data",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Tracks itunes rss feed data. — Edit",
   "main": "lib/index.js",
   "scripts": {
